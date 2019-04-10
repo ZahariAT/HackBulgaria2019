@@ -1,0 +1,15 @@
+pwd - print working directory print the path to the current directory 
+
+ls - list the fails in the current directory 
+
+control + l - remove every row except the current one 
+
+cat - returns the content of the file 
+
+cd  - change directory 
+
+python - executes python file 
+
+rm - remove file 
+
+which python - shows the path of where the folder for python3 or any other command is

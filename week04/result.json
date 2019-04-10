@@ -1,0 +1,23 @@
+{
+  "pandarace": [
+    {
+      "Pavlin": 8,
+      "Slavqna": 6,
+      "Ivo": 4
+    }
+  ],
+  "lemurRace": [
+    {
+      "Pavlin": 8,
+      "Ivo": 6
+    }
+  ],
+  "lemurFace": [
+    {
+      "Pavlin": 24,
+      "Rado": 20,
+      "Slavqna": 22,
+      "Ivo": 6
+    }
+  ]
+}
