@@ -21,3 +21,18 @@ get_low was called at 2019-04-29 19:38:37.112801
 something_heavy was called and took 2.00248599052 seconds to compile
 get_low was called at 2019-04-29 19:52:38.587394
 something_heavy was called and took 2.00249099731 seconds to compile
+something_heavy was called and took 2.0002884120003728 seconds to compile
+get_low was called at 2019-04-30 19:16:57.502316
+something_heavy was called and took 2.00245732500116 seconds to compile
+something_heavy was called and took 2.002149164000002 seconds to compile
+get_low was called at 2019-04-30 19:17:25.902787
+something_heavy was called and took 2.00211101000059 seconds to compile
+something_heavy was called and took 2.0025000420009746 seconds to compile
+get_low was called at 2019-04-30 19:17:54.387966
+something_heavy was called and took 2.001852448000136 seconds to compile
+something_heavy was called and took 2.0009158800003206 seconds to compile
+get_low was called at 2019-04-30 19:18:10.132328
+something_heavy was called and took 2.001944748000824 seconds to compile
+something_heavy was called and took 2.000501708998854 seconds to compile
+get_low was called at 2019-04-30 19:18:23.511234
+something_heavy was called and took 2.002546247000282 seconds to compile

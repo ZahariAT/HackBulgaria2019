@@ -39,7 +39,7 @@ class TestDecorators(unittest.TestCase):
     '''
     performance and log decorators are similar for testing. Only if I knew how to test them more precise
     '''
-    def test_log_which_takes_file_and_decorates_func_by_writing_in_the_file_the+date_the_fun_was_called(self):
+    def test_log_which_takes_file_and_decorates_func_by_writing_in_the_file_the_date_the_fun_was_called(self):
         @decorators.log('log.txt')
         def get_low():
             return 'Get get get low'
@@ -58,13 +58,15 @@ class TestDecorators(unittest.TestCase):
         something_heavy()
         with open('log.txt') as f:
             lines = f.readlines()
-        self.assertEqual(lines[-1][:37] + lines[-1][49:], '{} was called and took {} seconds to compile\n'.format(something_heavy.__name__,2))        
+        self.assertEqual(lines[-1][:37] + lines[-1][53:], '{} was called and took {} seconds to compile\n'.format(something_heavy.__name__,2))        
 
     def test_if_something_heavy_returns_the_string_I_am_done(self):
         self.assertEqual('I am done!', decorators.something_heavy())
 
 
 '''
+------ how to make temp files --------
+
 import os
 import tempfile
 
