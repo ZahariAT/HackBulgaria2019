@@ -1,7 +1,8 @@
 import unittest 
+
 import solution
 
-class testPolynomialsDerivates(unittest.TestCase):
+class TestPolynomialsDerivates(unittest.TestCase):
     def test_whether_a_single_variable_2_multiplyed_by_x_derived_is_displayed_correctly(self):
         single_var=solution.SingleArgument('2x')
         expected_result='2'

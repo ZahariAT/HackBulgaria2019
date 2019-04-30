@@ -1,7 +1,7 @@
 import json
+import os
 import random #random.uniform(0,1)
 import sys
-import os
 
 with open('cars.json') as f:
     data = json.load(f)
@@ -78,35 +78,31 @@ class Championship:
         self.race_name = name
         self.races_count = races_count
 
-def some_func_that_should_be_a_class():
-    lst_drivers = list()
-    for elem in data['people']:
-        a_car = Car(elem['car'], elem['model'], elem['max_speed'])
-        a_driver = Driver(elem['name'], a_car)
-        lst_drivers.append(a_driver)
-    passed_arg = sys.argv
-    if passed_arg[1] == "start":
-        print("Starting a new championship called {0} with {1} races.".format(passed_arg[2], passed_arg[3]))
-        for i in range(int(passed_arg[3])):
-            print('\n', "=====START=====", '\n')
-            Race(lst_drivers, random.uniform(0,1)).result()
-        result_dict = {}
-        if os.stat("result.json").st_size == 0:
-            with open('result.json', 'w') as f:
-                json.dump({passed_arg[2]:[other_data]}, f, indent=2)
-        else:
-            with open('result.json') as f:
-                result_dict = json.load(f)
-            if result_dict == None:
-                result_dict = {}
-            with open('result.json', 'w') as f:
-                result_dict.update({passed_arg[2]:[other_data]})
-                json.dump(result_dict, f, indent=2)
+    @staticmethod
+    def championship():
+        lst_drivers = list()
+        for elem in data['people']:
+            a_car = Car(elem['car'], elem['model'], elem['max_speed'])
+            a_driver = Driver(elem['name'], a_car)
+            lst_drivers.append(a_driver)
+        passed_arg = sys.argv
+        if passed_arg[1] == "start":
+            print("Starting a new championship called {0} with {1} races.".format(passed_arg[2], passed_arg[3]))
+            for i in range(int(passed_arg[3])):
+                print('\n', "=====START=====", '\n')
+                Race(lst_drivers, random.uniform(0,1)).result()
+            result_dict = {}
+            if os.stat("result.json").st_size == 0:
+                with open('result.json', 'w') as f:
+                    json.dump({passed_arg[2]:[other_data]}, f, indent=2)
+            else:
+                with open('result.json') as f:
+                    result_dict = json.load(f)
+                if result_dict == None:
+                    result_dict = {}
+                with open('result.json', 'w') as f:
+                    result_dict.update({passed_arg[2]:[other_data]})
+                    json.dump(result_dict, f, indent=2)
 
 if __name__ == '__main__':
-    some_func_that_should_be_a_class()
-'''
-I haven't opened this file for ages and have no idea how it works 
-and have no time to learn again, so will skip it. 
-The main functionality shoud be here even though not in the correct form.
-'''
+    Championship.championship()

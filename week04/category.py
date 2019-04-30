@@ -39,8 +39,9 @@ class Expense(Category):
             return super().__eq__(other) and self.expense == other.expense
         return NotImplemented
 
-b = Category("zahari")
-d = Income("zahari", 45)
-c = Income("zahari", 45)
-a = Expense("zahari", 45)
-print(a == c)
+if __name__ == '__main__':
+	b = Category("zahari")
+	d = Income("zahari", 45)
+	c = Income("zahari", 45)
+	a = Expense("zahari", 45)
+	print(a == c)

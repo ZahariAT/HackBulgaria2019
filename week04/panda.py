@@ -23,21 +23,21 @@ class Panda:
     def __str__(self):
         return "Panda: {0}".format(self.panda_name)
 
+if __name__ == '__main__':
+    panda_ivo = Panda('Ivo', 'ice-cream', 74)
+    #print(panda_ivo.panda_name)
+    #print(panda_ivo.curr_weight)
+    #print(panda_ivo.fav_food)
+    #panda_ivo.celebrate_birthday()          # same
+    #Panda.celebrate_birthday(panda_ivo)     #
+    #print(panda_ivo.curr_weight)
+    #print(panda_ivo == panda_ivo)           # defoult equal
+    #print(panda_ivo is panda_ivo)
 
-panda_ivo = Panda('Ivo', 'ice-cream', 74)
-#print(panda_ivo.panda_name)
-#print(panda_ivo.curr_weight)
-#print(panda_ivo.fav_food)
-#panda_ivo.celebrate_birthday()          # same
-#Panda.celebrate_birthday(panda_ivo)     #
-#print(panda_ivo.curr_weight)
-#print(panda_ivo == panda_ivo)           # defoult equal
-#print(panda_ivo is panda_ivo)
+    panda_ivo2 = Panda('Ivo', 'ice-cream', 74)
+    #print(panda_ivo2 == panda_ivo)
+    #print(panda_ivo2 is panda_ivo)              #to work we have to make our own equal; is is the original equal for objects
 
-panda_ivo2 = Panda('Ivo', 'ice-cream', 74)
-#print(panda_ivo2 == panda_ivo)
-#print(panda_ivo2 is panda_ivo)              #to work we have to make our own equal; is is the original equal for objects
-
-# dunder === double == magic methods under __smth__
-panda_ivo.current_panda = "Rosi"
-print(panda_ivo.current_panda)
+    # dunder === double == magic methods under __smth__
+    panda_ivo.current_panda = "Rosi"
+    print(panda_ivo.current_panda)

@@ -1,5 +1,5 @@
 class Bill:
-    #self is the pointer to the cuu_obj and with selh. we give him attributes, not neccesery to be that name but it's the first param of __init__
+    #self is the pointer to the current_obj and with self. we give him attributes, not neccesery to be that name but it's the first param of __init__
     def __init__(self, bill):
         self.validate_init_params(bill)
         self.curr_bill = bill
@@ -64,41 +64,40 @@ class CashDesk:
                 a_dict[temp] = 1
         print(sorted((k, v) for k, v in a_dict.items()))
 
+if __name__ == '__main__':
+    bill = Bill(10)
+    bill2 = Bill(10)
+    '''
+    print(str(bill))
+    print(bill)
+    print(bill == bill2)
+    '''
+    money_holder = {}
+
+    money_holder[bill2] = 1 # We have one 10% bill
+
+    if bill in money_holder:
+        money_holder[bill2] += 1
+
+    #print(money_holder) # { "A 10$ bill": 2 }... doesn't work
+
+    from collections import OrderedDict
+
+    #print(list(OrderedDict.fromkeys(t)))
 
 
-bill = Bill(10)
-bill2 = Bill(10)
-'''
-print(str(bill))
-print(bill)
-print(bill == bill2)
-'''
-money_holder = {}
+    values = [50, 10, 10, 50, 100]
+    bills = [Bill(value) for value in values]
+    #for bill in bills:
+        #print(bill)
+    batch = BillBatch(bills)
+    #print(batch.total())
+    #for bill in batch:
+     #   print(bill)
+    desk = CashDesk()
 
-money_holder[bill2] = 1 # We have one 10% bill
-
-if bill in money_holder:
-    money_holder[bill2] += 1
-
-#print(money_holder) # { "A 10$ bill": 2 }... doesn't work
-
-from collections import OrderedDict
-
-#print(list(OrderedDict.fromkeys(t)))
-
-
-values = [50, 10, 10, 50, 100]
-bills = [Bill(value) for value in values]
-#for bill in bills:
-    #print(bill)
-batch = BillBatch(bills)
-#print(batch.total())
-#for bill in batch:
- #   print(bill)
-desk = CashDesk()
-
-desk.take_money(batch)
-desk.take_money(Bill(10))
-print(desk.total())
-desk.inspect()
-#we have objName.__dict__
+    desk.take_money(batch)
+    desk.take_money(Bill(10))
+    print(desk.total())
+    desk.inspect()
+    #we have objName.__dict__

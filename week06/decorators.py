@@ -1,8 +1,8 @@
 import datetime
-from functools import wraps
 import time
 import timeit
-#kolko funkcii za vreme ima, basi
+
+from functools import wraps
 
 def accepts(*types):
     def accepter(func):

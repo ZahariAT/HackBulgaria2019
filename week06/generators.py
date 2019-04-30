@@ -1,3 +1,7 @@
+import os
+import pyautogui
+import random
+
 '''
 It's not documentation, just examples/no needed functions
 
@@ -42,6 +46,9 @@ def fib():
 
 for f in fib():
     print(f)
+#import pynput
+#import winsound  #can't install it
+#import keyboard
 '''
 def chain(iterable_one, iterable_two):
     for elem in iterable_one:
@@ -57,7 +64,7 @@ def compress(iterable, mask):
         else:
             next(iter_iterable)
 
-def cycle(iterable): #who cares if it works for dictionaries
+def cycle(iterable): #doesn't work with dict
     temp = range(len(iterable))
     i = 0
     while i <= len(temp):
@@ -66,17 +73,13 @@ def cycle(iterable): #who cares if it works for dictionaries
         yield iterable[i]
         i += 1
    
-def the_real_MVP_cycle(iterable): #I do!
+def the_real_MVP_cycle(iterable): #works with any iterable
     iter_iterable = iter(iterable)
     while True:
         try:
             yield next(iter_iterable)
         except Exception:
             iter_iterable = iter(iterable)
-
-
-import os
-#import keyboard
 
 def book_reader(a_book):
     current_chapter = ''
@@ -97,9 +100,6 @@ def read_chapters(a_book):
         if pressed_key == ' ':
             print(next(load_chapter))
        
-
-import random
-
 def book_generator(chapters_count, chapter_length_range):
     fille_with_words = open('/usr/share/dict/words')
     book_name = os.getcwd()
@@ -122,11 +122,6 @@ def book_generator(chapters_count, chapter_length_range):
             current_count_chapter += 1
     fille_with_words.close()
 
-
-import pyautogui
-#import pynput
-#import winsound  #can't install it
-
 def current_mouse_position():
     while True:
         x, y = pyautogui.position()
@@ -138,6 +133,7 @@ def some_fun():
     position = current_mouse_position()
     while input('Press enter to show the mouse position or 1 and enter to exit: ') != '1':
         print(next(position))
+
 if __name__ == '__main__':
     some_fun()
     #print(list(compress(["Ivo", "Rado", "Panda"], [False, False, True])))

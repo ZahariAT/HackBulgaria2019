@@ -6,17 +6,18 @@ decorator was called at 2019-04-05 19:40:50.418534
 decorator was called at 2019-04-06 23:05:27.570447
 get_low was called at 2019-04-06 23:23:37.546280
 something_heavy was called and took 2.0025378089994774 seconds to compele
-something_heavy was called and took 2.002526628999476 seconds to compele
-something_heavy was called and took 2.0025236239998776 seconds to compele
-something_heavy was called and took 2.0021578810010396 seconds to compele
-something_heavy was called and took 2.002243161001388 seconds to compele
-something_heavy was called and took 2.002528404002078 seconds to compele
-something_heavy was called and took 2.0020915489994877 seconds to compile
-something_heavy was called and took 2.0002763259999483 seconds to compile
-something_heavy was called and took 2.0021305099999154 seconds to compile
-something_heavy was called and took 2.0024637559999974 seconds to compile
-something_heavy was called and took 2.002269212999636 seconds to compile
-something_heavy was called and took 2.000694129000294 seconds to compile
-something_heavy was called and took 2.002252258000226 seconds to compile
-something_heavy was called and took 2.0018700009995882 seconds to compile
+something_heavy was called and took 2.002526628999476 seconds to compelesomething_heavy was called and took 2.0018700009995882 seconds to compile
 get_low was called at 2019-04-10 23:55:35.668768
+something_heavy was called and took 2.00220298767 seconds to compile
+get_low was called at 2019-04-26 01:22:43.534919
+something_heavy was called and took 2.00245213509 seconds to compile
+get_low was called at 2019-04-26 01:23:38.863472
+something_heavy was called and took 2.00109195709 seconds to compile
+get_low was called at 2019-04-26 01:25:13.274633
+something_heavy was called and took 2.00222086906 seconds to compile
+get_low was called at 2019-04-26 01:25:35.051408
+get_low was called at 2019-04-29 19:37:52.794129
+get_low was called at 2019-04-29 19:38:37.112801
+something_heavy was called and took 2.00248599052 seconds to compile
+get_low was called at 2019-04-29 19:52:38.587394
+something_heavy was called and took 2.00249099731 seconds to compile

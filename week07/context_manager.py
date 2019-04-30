@@ -1,10 +1,12 @@
 from contextlib import ContextDecorator
 from contextlib import contextmanager
-from time import sleep, time
 from datetime import datetime
+from time import sleep, time
 #import timeit
 
 '''
+-------examples-------
+
 class Context:
     def __init__(self):
         print('init')

@@ -7,4 +7,5 @@ class RowsToList:
                 lst.append(row)
         return lst
 
-print(RowsToList.rows_to_list("money_tracker.txt"))
+if __name__ == '__main__':
+    print(RowsToList.rows_to_list("money_tracker.txt"))

@@ -1,19 +1,9 @@
 import unittest
-import generators
 import mock
 
-#import module  #smth wrong with this module
-'''Traceback (most recent call last):
-  File "testGenerators.py", line 4, in <module>
-    import module
-  File "/usr/local/lib/python3.7/site-packages/module.py", line 42
-    module_name = caller()[1]
-                            ^
-TabError: inconsistent use of tabs and spaces in indentation
-'''
+import generators
 
-class testGenerators(unittest.TestCase):
-    'more are comming soon'
+class TestGenerators(unittest.TestCase):
     def test_whether_in_chain_list_and_set_arguments_are_given_and_return_value_is_converted_in_list(self):
         list_result = list(generators.chain([1, 2, 3], {3, 2}))
         expected_result = [1, 2, 3, 2, 3]
@@ -29,11 +19,8 @@ class testGenerators(unittest.TestCase):
         expected_result = []
         self.assertEqual(result, expected_result)
 
-    def test_current_mouse_position(self):
-        'Hello there!'
-
 '''
-Something that looks promising
+Something that looks promising and might help me/you
 
 from generator import generator, generate
 from mything import thingy
