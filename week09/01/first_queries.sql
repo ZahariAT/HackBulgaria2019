@@ -1,25 +1,29 @@
-SELECT ADDRESS
-FROM STUDIO
-WHERE NAME = 'MGM';
+SELECT address
+FROM   studio
+WHERE  name = 'MGM';
 
-SELECT 	BIRTHDATE
-FROM MOVIESTAR
-WHERE NAME = 'Kim Basinger';
+SELECT birthdate
+FROM   moviestar
+WHERE  name = 'Kim Basinger';
 
-SELECT NAME
-FROM MOVIEEXEC
-WHERE NETWORTH > 10000000;
+SELECT name
+FROM   movieexec
+WHERE  networth > 10000000;
 
-SELECT NAME
-FROM MOVIESTAR
-WHERE GENDER = 'M' OR ADDRESS = 'Prefect Rd.';
+SELECT name
+FROM   moviestar
+WHERE  gender = 'M'
+        OR address = 'Prefect Rd.';
 
-INSERT INTO MOVIESTAR
-VALUES ('Zahari Baharov', 'Boulevard Vasil Levski', 'M', '1900-01-01');
+INSERT INTO moviestar
+VALUES      ('Zahari Baharov',
+             'Boulevard Vasil Levski',
+             'M',
+             '1900-01-01');
 
-DELETE FROM STUDIO
-WHERE ADDRESS LIKE '%5%';
+DELETE FROM studio
+WHERE  address LIKE '%5%';
 
-UPDATE MOVIE
-SET STUDIONAME = 'Fox'
-WHERE TITLE LIKE '%Star%';
+UPDATE movie
+SET    studioname = 'Fox'
+WHERE  title LIKE '%Star%';  
